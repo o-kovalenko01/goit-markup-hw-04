@@ -347,12 +347,9 @@ img {
   margin-bottom: 16px;
 }
 
-.footer-text {
+.footer-icon {
+  fill: var(--cloud);
 }
-
-.footer-social {
-}
-
 .footer-social-list {
   display: flex;
   gap: 16px;
