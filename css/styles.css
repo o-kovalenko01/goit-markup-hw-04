@@ -76,36 +76,6 @@ img {
   margin: 0 auto;
 }
 
-.current-std {
-  position: relative;
-}
-
-.current-std::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 48px;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--ocean);
-}
-
-.current-prtfl {
-  position: relative;
-}
-
-.current-prtfl::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 66px;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--ocean);
-}
-
 .page-title {
   color: var(--navyblue);
   text-align: center;
@@ -129,6 +99,9 @@ img {
 /* __________________HEADER________________ */
 .header {
   border-bottom: 1px solid var(--cornflower, #e7e9fc);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -175,6 +148,7 @@ img {
   padding-top: 24px;
   padding-bottom: 24px;
   display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-item:focus,
@@ -201,11 +175,44 @@ img {
   padding-top: 24px;
   padding-bottom: 24px;
   display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contacts-item:focus,
 .header-contacts-item:hover {
   color: var(--ocean);
+}
+
+.current-std {
+  position: relative;
+  color: var(--ocean);
+}
+
+.current-std::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--ocean);
+}
+
+.current-prtfl {
+  position: relative;
+  color: var(--ocean);
+}
+
+.current-prtfl::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 66px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--ocean);
 }
 
 /* __________________HERO________________ */
@@ -218,6 +225,9 @@ img {
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -249,6 +259,7 @@ img {
   min-width: 169px;
   border: none;
   height: 56px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:focus,
@@ -319,8 +330,8 @@ img {
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
-.team-item-text {
-  padding: 32px 16px;
+.team-item-block {
+  padding: 32px 0;
 }
 
 .team-subtitle {
@@ -332,10 +343,11 @@ img {
   margin-bottom: 8px;
 }
 
-.team-block {
+.team-block-list {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
   gap: 24px;
 }
 
@@ -344,6 +356,12 @@ img {
   height: 40px;
   background-color: var(--iris);
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-ref {
   display: flex;
   align-items: center;
   justify-content: center;
